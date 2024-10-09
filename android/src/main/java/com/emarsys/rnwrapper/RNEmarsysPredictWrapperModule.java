@@ -177,7 +177,7 @@ public class RNEmarsysPredictWrapperModule extends ReactContextBaseJavaModule {
             } else {
                 Emarsys.getPredict().recommendProducts(recLogic, resultListener);
             }
-        } catch (Exception e) {
+        } catch (Throwable e) {
             promise.reject(TAG, "Error recommendProducts: ", e);
         }
     }
