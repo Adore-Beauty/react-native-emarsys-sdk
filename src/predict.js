@@ -161,7 +161,7 @@ const Predict = {
    *
    * @param {{availabilityZone?: string; limit?: number; filters?: {type: 'exclude' | 'include'; field: string;
    * comparison: 'is' | 'in' | 'has' | 'overlaps';
-   * expectations: string | string[]}}} recommendationOptions - Options for recommendation.
+   * expectations: string | string[]}}}[] recommendationOptions - Options for recommendation.
    * 	- `availabilityZone` - You can personalize the recommendation further by setting the `availabilityZones` parameter of the recommendation, to only recommend the locally available products. This is an optional parameter.
    * 	- `limit` - You can limit the number of recommended products received by defining a limit. This is an optional parameter, by default its value is 5.
    * 	- `filters` - You can filter product recommendations with the SDK by building `RecommendationFilters`. This is an optional parameter.
