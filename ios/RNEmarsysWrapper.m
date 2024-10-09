@@ -63,7 +63,7 @@ RCT_EXPORT_METHOD(trackCustomEvent:(NSString * _Nonnull)eventName eventAttribute
 }
 
 RCT_EXPORT_METHOD(setEventHandler) {
-    
+
 }
 
 // MARK: - DeepLink
@@ -75,10 +75,11 @@ RCT_EXPORT_METHOD(trackDeepLink:(NSString * _Nonnull)userActivity resolver:(RCTP
             NSURL *activityURL = [NSURL URLWithString:userActivity];
             @try {
                 activity.webpageURL = activityURL;
-                
-                [Emarsys trackDeepLinkWithUserActivity:activity sourceHandler:^(NSString *source) {
-                    resolve([NSNumber numberWithBool:YES]);
-                }];
+                if (activityURL && activityURL.absoluteString && ![activityURL.absoluteString isEqualToString:@""]) {
+                    [Emarsys trackDeepLinkWithUserActivity:activity sourceHandler:^(NSString *source) {
+                        resolve([NSNumber numberWithBool:YES]);
+                    }];
+                }
             }
             @catch (NSException *ex) {
                 reject(ex.name, ex.reason, nil);
