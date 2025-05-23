@@ -16,6 +16,12 @@ We created a sample application to help in the integration and give an example. 
 
 Check the latest version [here](https://github.com/emartech/react-native-emarsys-sdk/releases)
 
+### Expo
+
+To handle native system events, ensure the native module is properly exposed. See the [Expo documentation](https://docs.expo.dev/modules/appdelegate-subscribers/) for details.
+
+`$ npx expo prebuild --clean`
+
 ## Requirements
 
 - React Native version 0.67.3 or higher.
@@ -24,11 +30,11 @@ Check the latest version [here](https://github.com/emartech/react-native-emarsys
 
 ## Contributing
 
-Should you have any suggestions or bug reports, please raise an [Emarsys support request](https://help.emarsys.com/hc/en-us/articles/360012853058-Support-at-Emarsys-Raising-a-support-request).
+Should you have any suggestions or bug reports, please raise an [SAP Emarsys support request](https://help.sap.com/docs/SAP_EMARSYS/8bf21e3e3ad3475bb9e25de1e0ac3d86/0f337f67c0cf4c799d3e976f4e24a503.html?locale=en-US&version=CLOUD).
 
 ## Code of Conduct
 
-Please see our [Code of Conduct](https://github.com/emartech/.github/blob/main/CODE_OF_CONDUCT.md) for detail.
+Please see our [Code of Conduct](https://github.com/emartech/.github/blob/main/CODE_OF_CONDUCT.md) for details.
 
 ## Licensing
 
